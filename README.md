@@ -16,20 +16,18 @@ Usage with Type Conversion
 --------------
 
 ```sh
-var cursor = ;
+var cursor = Collection.Find(Query.EQ("Field", "Value"));
 var pageNumber = 1;
 var pageSize = 25;
-Collection.Find(Query.EQ("Field", "Value"));
 var model = new MongoPagedList<TSource, TDestination>(query, pageNumber, pageSize);
 ```
 Usage without Type Conversion
 --------------
 
 ```sh
-var cursor = ;
+var cursor = Collection.Find(Query.EQ("Field", "Value"));
 var pageNumber = 1;
 var pageSize = 25;
-Collection.Find(Query.EQ("Field", "Value"));
 var model = new MongoPagedList<T>(query, pageNumber, pageSize);
 ```
 
