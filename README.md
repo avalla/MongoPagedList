@@ -9,7 +9,7 @@ A PagedList extension that works with MongoCursor.
 Version
 ----
 
-1.0
+1.0.0.1
 
 
 Usage with Type Conversion
@@ -19,7 +19,7 @@ Usage with Type Conversion
 var cursor = Collection.Find(Query.EQ("Field", "Value"));
 var pageNumber = 1;
 var pageSize = 25;
-var model = new MongoPagedList<TSource, TDestination>(query, pageNumber, pageSize);
+var model = new MongoPagedList<TSource, TDestination>(cursor, pageNumber, pageSize);
 ```
 Usage without Type Conversion
 --------------
@@ -28,7 +28,7 @@ Usage without Type Conversion
 var cursor = Collection.Find(Query.EQ("Field", "Value"));
 var pageNumber = 1;
 var pageSize = 25;
-var model = new MongoPagedList<T>(query, pageNumber, pageSize);
+var model = new MongoPagedList<T>(cursor, pageNumber, pageSize);
 ```
 
 License
